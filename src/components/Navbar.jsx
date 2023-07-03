@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav className={`${styles.paddingX}  w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}>
 
     <div className= "justify-between w-full mx-auto items-center  flex max-w-7xl">
-      <Link to="/Curtis_3D_Portfolio/" className="flex items-center gap-2"
+      <Link to="/" className="flex items-center gap-2"
       onClick={()=>{ 
         setActive("");
         window.scrollTo(0, 0);

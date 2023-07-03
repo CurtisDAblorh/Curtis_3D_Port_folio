@@ -1,7 +1,6 @@
 {
   "name": "3d_portfolio",
   "private": false,
-  "homepage": "https://curtisdablorh.github.io/Curtis_3D_Portfolio/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
