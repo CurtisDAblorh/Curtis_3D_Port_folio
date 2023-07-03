@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 import {styles} from '../styles';
 import {navLinks} from '../constants';
-import {funkomepng, menu, close } from '../assets';
+import {Funkomepng, menu, close } from '../assets';
 
 
 const Navbar = () => {
@@ -18,7 +18,7 @@ const Navbar = () => {
         window.scrollTo(0, 0);
       }}
       >
-        <html><img src = {funkomepng} alt="funkome" className="object-contain w-12 h-12"/></html>
+        <html><img src = {Funkomepng} alt="Funkome" className="object-contain w-12 h-12"/></html>
         <p className= "text-white text-[18px] font-bold cursor-pointer flex">Curtis &nbsp;
          <span className="sm:block hidden">| 3D_Portfolio
          </span>

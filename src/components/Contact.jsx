@@ -2,7 +2,7 @@ import React from 'react';
 import {useState, useRef} from 'react';
 import {motion} from 'framer-motion';
 import emailjs from '@emailjs/browser';
-import {funkomepng } from '../assets';
+import {Funkomepng } from '../assets';
 import {styles} from '../styles';
 import { EarthCanvas} from './canvas';
 import {SectionWrapper} from '../hoc';
@@ -79,7 +79,7 @@ emailjs.send(
  </div>
 <p className={styles.sectionSubText}>Get
  in Touch!</p>
-<h3 className={styles.sectionHeadText2}>Contact me.<div className="flex w-[20%] h-[20%] items-end"><img src={funkomepng}
+<h3 className={styles.sectionHeadText2}>Contact me.<div className="flex w-[20%] h-[20%] items-end"><img src={Funkomepng}
 alt="Funkome"
 className=" xl:ml-[160%] xs:ml-[60%]" /></div></h3>
 
