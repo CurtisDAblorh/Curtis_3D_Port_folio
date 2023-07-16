@@ -72,16 +72,18 @@ emailjs.send(
     className="flex-[0.75] bg-black-100 p-8 rounded-2xl mx-auto">
     
     
- <div className="absolute inset-0 flex justify-end m-1 card-img_hover">
- <div>
-      
-    </div>
- </div>
+ {/* <div className="absolute inset-0 flex justify-end m-1 card-img_hover">
+ 
+ </div> */}
 <p className={styles.sectionSubText}>Get
  in Touch!</p>
-<h3 className={styles.sectionHeadText2}>Contact me.<div className="flex w-[20%] h-[20%] items-end"><img src={Funkomepng}
+<h3 className={styles.sectionHeadText2}>Contact me.
+
+<div className="flex w-[20%] h-[20%] items-end">
+<img src={Funkomepng}
 alt="Funkome"
-className=" xl:ml-[160%] xs:ml-[60%]" /></div></h3>
+className=" xl:ml-[160%] xs:ml-[60%]" />
+</div></h3>
 
 
 <form
