@@ -274,7 +274,7 @@ import {
       ],
       image: portfolio2,
       source_code_link: "https://github.com/CurtisDAblorh/Curtis_3D_Portfolio",
-      webpage_link:"http://localhost:5173/Curtis_3D_Port_folio/",
+      webpage_link:"https://curtisdablorh.github.io/Curtis_3D_Port_folio/",
     },
     {
       name: "Calculator App",
