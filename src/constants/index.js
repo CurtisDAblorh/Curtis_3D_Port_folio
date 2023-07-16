@@ -248,7 +248,7 @@ import {
       ],
       image: ecommerce,
       source_code_link: "https://github.com/CurtisDAblorh/Ebuyer-Ecommerce-Site",
-      webpage_link:"",
+      webpage_link:"https://curtisdablorh1.netlify.app/",
     },
     {
       name: "3D_Portfolio",
@@ -274,7 +274,7 @@ import {
       ],
       image: portfolio2,
       source_code_link: "https://github.com/CurtisDAblorh/Curtis_3D_Portfolio",
-      webpage_link:"https://curtisdablorh.github.io/Curtis_3D_Portfolio/",
+      webpage_link:"http://localhost:5173/Curtis_3D_Port_folio/",
     },
     {
       name: "Calculator App",
@@ -295,8 +295,8 @@ import {
         },
       ],
       image: calc,
-      source_code_link: "https://github.com/",
-      webpage_link:"",
+      source_code_link: "https://github.com/CurtisDAblorh/Calculator_App",
+      webpage_link:"https://curtisdablorhcalculator.netlify.app/",
     },
     {
       name: "HTML & CSS Portfolio",
