@@ -301,7 +301,7 @@ import {
     {
       name: "HTML & CSS Portfolio",
       description:
-        "My first portfolio developed with only HTML and CSS, showcasing the Arduino C++ projects I have woked on and the coding skillset developed over the years. ",
+        "My first portfolio developed with only HTML and CSS, showcasing the Arduino C++ projects I have worked on and the coding skillset developed over the years. This website features navlinks and a custom favicon! ",
       tags: [
         {
           name: "HTML",
