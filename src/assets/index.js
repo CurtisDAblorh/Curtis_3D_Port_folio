@@ -41,8 +41,10 @@ import calc from "./calc.png";
 import portfolio1 from "./portfolio1.png";
 import hand from "./hand.png";
 import rmr from "./company/rmr.png";
+import reverb from "./reverb.png";
 
 export {
+  reverb,
   rmr,
   hand,
   portfolio1,

@@ -1,5 +1,6 @@
 import {
   rmr,
+  reverb,
   hand,
   portfolio1,
   calc,
@@ -341,6 +342,28 @@ import {
       image: hand,
       source_code_link: "https://github.com/CurtisDAblorh/Orthotic_Exoskeleton",
       webpage_link:"https://github.com/CurtisDAblorh/Orthotic_Exoskeleton",
+    },
+    {
+      name: "Reverb (In Progress)",
+      description:"Music player with a section dedicated to saving playlists and illustrating different animations per track played. This will be using an API from spotify to display the tracks and based on the genre change the screen animation to suit.",
+
+      tags: [
+        {
+          name: "Typescript",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "NextJS",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Tailwind CSS",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: reverb,
+      source_code_link: "",
+      webpage_link:"",
     },
   ];
   
