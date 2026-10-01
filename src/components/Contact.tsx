@@ -1,33 +1,37 @@
-import React from 'react';
-import {useState, useRef} from 'react';
+import {useState, useRef, type ChangeEvent, type FormEvent} from 'react';
 import {motion} from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import {Funkomepng } from '../assets';
 import {styles} from '../styles';
-import { EarthCanvas} from './canvas';
 import {SectionWrapper} from '../hoc';
-import {slideIn, fadeIn} from '../utils/motion';
+import {slideIn} from '../utils/motion';
 
 // /template_3a57i3n
 //service_t4bh3d1
 //cLTyLZXVMCnA020gf
+type ContactForm = {
+  name: string;
+  email: string;
+  message: string;
+};
+
 const Contact = () => {
-  const formRef = useRef();
-  const [form, setForm] = useState(
-    {name: '', 
+  const formRef = useRef<HTMLFormElement>(null);
+  const [form, setForm] = useState<ContactForm>(
+    {name: '',
     email:'',
     message:'',
 
 
     }
   )
-var  [loading, setLoading] = useState(false);
+const [loading, setLoading] = useState(false);
 
-const handleChange = (e) => {
+const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
   const {name, value} = e.target;
   setForm({...form, [name]: value})
 }
-const handleSubmit = (e) => {
+const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
   e.preventDefault();
   setLoading(true);
 emailjs.send(
@@ -43,23 +47,20 @@ emailjs.send(
 'cLTyLZXVMCnA020gf',
 )
 .then(()=>{
-  setLoading=(false);
+  setLoading(false);
   alert('Thank you. I will respond as soon as I am available');
 
   setForm(
-    {name: '', 
+    {name: '',
     email:'',
     message:'',
 
-    }, (error) => {
-      setLoading(false)
-      console.log(error);
-      alert('Something went wrong, please email me at mensah.curtis@gmail.com or try again.')
     }
-
-
-
   )
+}, (error: unknown) => {
+  setLoading(false)
+  console.log(error);
+  alert('Something went wrong, please email me at mensah.curtis@gmail.com or try again.')
 })
 }
 
@@ -135,7 +136,7 @@ className=" text-white font-medium mb-4"
   >Message</span>
 
   <textarea
-  rows="7"
+  rows={7}
 
   name="message"
   value={form.message}

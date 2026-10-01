@@ -1,4 +1,6 @@
+import type { Experience, NavLink, Project, Service, Testimonial } from "../types";
 import {
+  reach,
   rmr,
   reverb,
   hand,
@@ -14,28 +16,9 @@ import {
     backend,
     creator,
     web,
-    javascript,
-    typescript,
-    html,
-    css,
-    reactjs,
-    redux,
-    tailwind,
-    nodejs,
-    mongodb,
-    git,
-    figma,
-    docker,
-    meta,
-    starbucks,
-    shopify,
-    carrent,
-    jobit,
-    tripguide,
-    threejs,
   } from "../assets";
   
-  export const navLinks = [
+  export const navLinks: NavLink[] = [
     {
       id: "about",
       title: "About",
@@ -54,7 +37,7 @@ import {
     },
   ];
   
-  const services = [
+  const services: Service[] = [
     {
       title: "Front End Developer",
       icon: web,
@@ -72,69 +55,30 @@ import {
       icon: creator,
     },
   ];
-  
-  const technologies = [
+    
+  const experiences: Experience[] = [
     {
-      name: "HTML 5",
-      icon: html,
+      title: "Frontend Developer",
+      company_name: "Reach Industries",
+      icon:reach,
+      iconBg: "white",
+      date: "Jan 2024 - Present",
+      points: [
+        "Led end-to-end delivery of key product pages, collaborating with scientific customers and product owners to translate complex workflow requirements into Figma design prototypes, then owning implementation through to production.",
+        "Architected and built responsive, cross-browser front-end experiences in React, Next.js and TypeScript, integrating REST APIs and real-time features (WebRTC, WebSockets) to support data-rich scientific interfaces.",
+        "Integrated type-safe API contracts using Kubb-generated clients from the OpenAPI spec, keeping the frontend and the backend in sync as the API surface evolved while reducing runtime type errors.",
+        "Built reusable, custom D3-based visualisation components for timeline and scientific data views beyond standard chart library capabilities, developing and testing them in isolation via a shared Storybook workshop published through CI.",
+        "Ran a fully containerised local development workflow (Docker) spanning multiple repositories, enabling isolated, full-stack agentic prototyping and feature development as well as faster iteration across the team.",
+        "Drove test coverage strategy spanning unit, E2E and visual regression tests using Jest, React Testing Library, Playwright and Chromatic then re-engineered the CI pipeline — cutting E2E build times from 22 to under 14 minutes (~35% faster).",
+        "Owned application security hygiene: identified and remediated vulnerabilities, established recurring automated dependency and vulnerability alerts and managed routine dependency upgrades to keep the codebase current and secure.",
+      ],
     },
-    {
-      name: "CSS 3",
-      icon: css,
-    },
-    {
-      name: "JavaScript",
-      icon: javascript,
-    },
-    {
-      name: "TypeScript",
-      icon: typescript,
-    },
-    {
-      name: "React JS",
-      icon: reactjs,
-    },
-    {
-      name: "Redux Toolkit",
-      icon: redux,
-    },
-    {
-      name: "Tailwind CSS",
-      icon: tailwind,
-    },
-    {
-      name: "Node JS",
-      icon: nodejs,
-    },
-    {
-      name: "MongoDB",
-      icon: mongodb,
-    },
-    {
-      name: "Three JS",
-      icon: threejs,
-    },
-    {
-      name: "git",
-      icon: git,
-    },
-    {
-      name: "figma",
-      icon: figma,
-    },
-    {
-      name: "docker",
-      icon: docker,
-    },
-  ];
-  
-  const experiences = [
     {
       title: "Junior Frontend Developer",
       company_name: "RMR Property Investments",
       icon:rmr,
       iconBg: "black",
-      date: "May 2022 - Present",
+      date: "May 2022 - December 2024",
       points: [
         "Developed and maintained responsive web applications using HTML, CSS, JavaScript and React.Js, ensuring cross-browser compatibility and optimal performance.",
         "Collaborated closely with designers and back-end developers to implement UI designs and integrate REST APIs, ensuring a seamless user experience.",
@@ -197,7 +141,7 @@ import {
     },
   ];
   
-  const testimonials = [
+  const testimonials: Testimonial[] = [
     {
       testimonial:
         "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
@@ -224,7 +168,7 @@ import {
     },
   ];
   
-  const projects = [
+  const projects: Project[] = [
     {
       name: "Fullstack Ecommerce",
       description:
@@ -367,4 +311,4 @@ import {
     },
   ];
   
-  export { services, technologies, experiences, testimonials, projects };
+  export { services, experiences, testimonials, projects };

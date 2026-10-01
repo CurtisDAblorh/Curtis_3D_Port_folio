@@ -17,6 +17,7 @@ import figma from "./tech/figma.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
+import next from "./tech/next.png";
 import mongodb from "./tech/mongodb.png";
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
@@ -41,6 +42,7 @@ import calc from "./calc.png";
 import portfolio1 from "./portfolio1.png";
 import hand from "./hand.png";
 import rmr from "./company/rmr.png";
+import reach from "./company/reach.png";
 import reverb from "./reverb.png";
 
 export {
@@ -55,7 +57,6 @@ portfolio2,
   bright,
   wagamama,
   wanstor,
-  // funkome,
   Funkomepng,
   logo,
   backend,
@@ -72,6 +73,7 @@ portfolio2,
   git,
   html,
   javascript,
+  next,
   mongodb,
   nodejs,
   reactjs,
@@ -85,4 +87,5 @@ portfolio2,
   carrent,
   jobit,
   tripguide,
+  reach
 };
