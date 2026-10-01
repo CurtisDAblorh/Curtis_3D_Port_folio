@@ -1,14 +1,17 @@
-import React from 'react';
 import {Tilt} from 'react-tilt';
 import {motion} from 'framer-motion';
 import { SectionWrapper } from '../hoc';
 import {styles} from '../styles';
 import {services} from '../constants';
+import type {Service} from '../types';
 import {fadeIn, textVariant} from '../utils/motion';
 
 
+type ServiceCardProps = Service & {
+  index: number;
+};
 
-const ServiceCard= ({index, title, icon}) => {
+const ServiceCard= ({index, title, icon}: ServiceCardProps) => {
 return (
  <Tilt className="xs:w-[250px] w-full">
  <motion.div 
@@ -16,12 +19,6 @@ return (
  className="w-full bg-gradient-to-b from-blue-600 to-fuchsia-600 p-[1px] rounded-[20px] shadow-card"
  >
 <div
-options=
-{
- { max:45, 
-  scale:1, 
-  speed:450}
-}
 className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
 
 <img src={icon} alt={title} 
@@ -57,7 +54,7 @@ Hi, my name is <a className="text-purple-700"> Curtis</a> a
 
 I have in-depth knowledge and hands-on experience in
  creating engaging and responsive user interfaces 
- using the React framework as well as it's many dependencies. 
+ using the React framework as well as it&apos;s many dependencies. 
  
  With a strong foundation in HTML, CSS, and JavaScript,
   combined with expertise in React and its ecosystem, I am proficient in developing modern, interactive web applications.

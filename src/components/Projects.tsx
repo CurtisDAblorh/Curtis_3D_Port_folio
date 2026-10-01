@@ -1,17 +1,19 @@
-import React from 'react';
 import {Tilt} from 'react-tilt';
 import {motion} from 'framer-motion';
 import { SectionWrapper } from '../hoc';
 import {styles} from '../styles';
-import {services} from '../constants';
 import {fadeIn, textVariant} from '../utils/motion';
 import {github} from '../assets';
 import {webpage} from '../assets';
 import {projects} from '../constants'
+import type {Project} from '../types';
 
 
+type ProjectCardProps = Project & {
+  index: number;
+};
 
-const ProjectCard= ({index, name, description, tags, image, source_code_link, webpage_link}) => {
+const ProjectCard= ({index, name, description, tags, image, source_code_link, webpage_link}: ProjectCardProps) => {
 return (
 
  <motion.div 

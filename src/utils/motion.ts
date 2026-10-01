@@ -1,4 +1,10 @@
-export const textVariant = (delay) => {
+import type { Transition, Variants } from "framer-motion";
+
+type Direction = "left" | "right" | "up" | "down" | "";
+// Callers may pass "" to fall back to framer-motion's default transition type.
+type TransitionType = Transition["type"] | "";
+
+export const textVariant = (delay?: number): Variants => {
     return {
       hidden: {
         y: -50,
@@ -16,7 +22,7 @@ export const textVariant = (delay) => {
     };
   };
   
-  export const fadeIn = (direction, type, delay, duration) => {
+  export const fadeIn = (direction: Direction, type: TransitionType, delay: number, duration: number): Variants => {
     return {
       hidden: {
         x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
@@ -28,7 +34,7 @@ export const textVariant = (delay) => {
         y: 0,
         opacity: 1,
         transition: {
-          type: type,
+          type: type || undefined,
           delay: delay,
           duration: duration,
           ease: "easeOut",
@@ -37,7 +43,7 @@ export const textVariant = (delay) => {
     };
   };
   
-  export const zoomIn = (delay, duration) => {
+  export const zoomIn = (delay: number, duration: number): Variants => {
     return {
       hidden: {
         scale: 0,
@@ -56,7 +62,7 @@ export const textVariant = (delay) => {
     };
   };
   
-  export const slideIn = (direction, type, delay, duration) => {
+  export const slideIn = (direction: Direction, type: TransitionType, delay: number, duration: number): Variants => {
     return {
       hidden: {
         x: direction === "left" ? "-100%" : direction === "right" ? "100%" : 0,
@@ -66,7 +72,7 @@ export const textVariant = (delay) => {
         x: 0,
         y: 0,
         transition: {
-          type: type,
+          type: type || undefined,
           delay: delay,
           duration: duration,
           ease: "easeOut",
@@ -75,7 +81,7 @@ export const textVariant = (delay) => {
     };
   };
   
-  export const staggerContainer = (staggerChildren, delayChildren) => {
+  export const staggerContainer = (staggerChildren?: number, delayChildren?: number): Variants => {
     return {
       hidden: {},
       show: {

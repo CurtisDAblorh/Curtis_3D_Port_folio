@@ -1,0 +1,26 @@
+import type {SimpleIcon} from 'simple-icons';
+
+type BrandIconProps = {
+  /** A brand from the `simple-icons` package, e.g. `siReact`. */
+  icon: SimpleIcon;
+  className?: string;
+};
+
+// Relative luminance (0 = black, 1 = white) of a 6-digit hex colour.
+const luminance = (hex: string) => {
+  const [r, g, b] = [0, 2, 4].map((i) => {
+    const c = parseInt(hex.slice(i, i + 2), 16) / 255;
+    return c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
+  });
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+};
+
+// Brand colours that would vanish on the site's dark background are drawn white instead.
+const fillFor = (hex: string) => (luminance(hex) < 0.05 ? '#ffffff' : `#${hex}`);
+
+export const BrandIcon = ({icon, className}: BrandIconProps) => (
+  <svg role="img" viewBox="0 0 24 24" fill={fillFor(icon.hex)} className={className}>
+    <title>{icon.title}</title>
+    <path d={icon.path} />
+  </svg>
+);

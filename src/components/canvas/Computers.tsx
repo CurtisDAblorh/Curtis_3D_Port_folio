@@ -1,17 +1,19 @@
-import React from 'react';
 import { Suspense, useEffect, useState } from 'react';
 import {Canvas} from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import CanvasLoader from '../Loader';
 
 
+type ComputersProps = {
+  isMobile: boolean;
+};
 
-const Computers = ({isMobile}) => {
+const Computers = ({isMobile}: ComputersProps) => {
 
   const computer = useGLTF('./desktop_pc/WeDevMe.gltf')
   return (
     <mesh>
-      <hemisphereLight intensity={0.55} groundColour="black"/>
+      <hemisphereLight intensity={0.55}/>
       <pointLight intensity={1}/>
       <spotLight 
       position={[-20,50,-13]}
@@ -40,7 +42,7 @@ useEffect(() => {
 
   setIsMobile(mediaQuery.matches);
 
-const handleMediaQueryChange = (event) => {
+const handleMediaQueryChange = (event: MediaQueryListEvent) => {
   setIsMobile(event.matches);
 }
 
@@ -58,7 +60,6 @@ mediaQuery.addEventListener('change',
 return (
 <Canvas
 className="cursor-col-resize"
-  frameLoop="demand"
   shadows
   camera={{position: [20, 3, 5], fov: 25}}
   gl={{preserveDrawingBuffer: true}}
