@@ -36,14 +36,14 @@ import fedex from "./company/fedex.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
-import ecommerce from "./ecommerce.png";
+import ecommerce from "./ebuyer.jpg";
 import portfolio2 from "./portfolio2.png";
 import calc from "./calc.png";
 import portfolio1 from "./portfolio1.png";
 import hand from "./hand.png";
 import rmr from "./company/rmr.png";
 import reach from "./company/reach.png";
-import reverb from "./reverb.png";
+import reverb from "./reverb.jpg";
 
 export {
   reverb,

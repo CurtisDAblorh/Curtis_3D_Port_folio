@@ -170,30 +170,30 @@ import {
   
   const projects: Project[] = [
     {
-      name: "Fullstack Ecommerce",
+      name: "Ebuyer Storefront",
       description:
-        "Online retail store that allows the users to select from a range of items, add and subtract them from the cart, then finally complete the payment process with stripe. Fully scalable with the use of commerceJS.com as a backend",
+        "Modern ecommerce storefront with 150+ products, a D3 price-range brush, price-history and spending charts, a validated multi-step checkout with live card preview, wishlist and persistent bag. Built with an MUI component library and Storybook, tested with Jest and Playwright.",
       tags: [
         {
-          name: "react",
+          name: "nextjs",
           color: "blue-text-gradient",
         },
         {
-          name: "stripe",
+          name: "mui",
           color: "green-text-gradient",
         },
         {
-          name: "commercejs",
+          name: "redux",
           color: "pink-text-gradient",
         },
         {
-          name: "restapi",
+          name: "d3",
           color: "purple-text-gradient",
         },
       ],
       image: ecommerce,
       source_code_link: "https://github.com/CurtisDAblorh/Ebuyer-Ecommerce-Site",
-      webpage_link:"https://curtisdablorh1.netlify.app/",
+      webpage_link: "https://curtisdablorh.github.io/Ebuyer-Ecommerce-Site/",
     },
     {
       name: "3D_Portfolio",
@@ -288,26 +288,30 @@ import {
       webpage_link:"https://github.com/CurtisDAblorh/Orthotic_Exoskeleton",
     },
     {
-      name: "Reverb (In Progress)",
-      description:"Music player with a section dedicated to saving playlists and illustrating different animations per track played. This will be using an API from spotify to display the tracks and based on the genre change the screen animation to suit.",
-
+      name: "Reverb",
+      description:
+        "Genre-reactive music player using the Spotify API: the UI, live D3 audio visualiser and backdrop change with every track. Includes playlists, a command palette, keyboard shortcuts and a D3 listening-stats dashboard. Built with shadcn/ui and Storybook, tested with Jest and Playwright.",
       tags: [
         {
-          name: "Typescript",
+          name: "typescript",
           color: "blue-text-gradient",
         },
         {
-          name: "NextJS",
+          name: "nextjs",
           color: "green-text-gradient",
         },
         {
-          name: "Tailwind CSS",
+          name: "shadcn",
           color: "pink-text-gradient",
+        },
+        {
+          name: "d3",
+          color: "purple-text-gradient",
         },
       ],
       image: reverb,
-      source_code_link: "",
-      webpage_link:"",
+      source_code_link: "https://github.com/CurtisDAblorh/reverb",
+      webpage_link: "https://curtisdablorh.github.io/reverb/",
     },
   ];
   
